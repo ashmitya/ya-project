@@ -6,7 +6,7 @@
 
 2) создайте папку на вашем компе и сделайте в ней клон репозитория след командой: 
 
-git clone git@github.com:your_username/ya-project.git 
+git clone https://github.com/yourGitHubAccount/ya-project.git
 
 3) Склонированный репозиторий будет иметь привязку к удалённому репозиторию в вашем аккаунте, а не в моем(общем). Эта привязка называется origin 
 
