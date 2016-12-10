@@ -239,6 +239,12 @@ body {
 .ya-aboutus__header{
     margin-top:5%;
     .display-flex(@direction:row, @justify, @align);
+    >div{
+        width:25%;
+    }
+    p{
+        width:70%;
+    }
 }
 
 .ya-aboutus__nav{
@@ -300,8 +306,125 @@ body {
     
 }
 
+//our skills
+.ya-container-ourskills{
+    background-color:#F7F7F7;
+    .display-flex(@direction, @justify, @align);
+    padding: 5% 7.5%;
+    height:100%;
+    margin: 0 auto;
+    color:@grey-color;
+    
+    >h2{
+        font-size:24px;
+        font-family: "Lato Black";
+        text-transform: uppercase;
+        
+    }
+    >p{
+        margin: 5% 0%;
+        text-align:center;
+    }
+}
 
-//Services
+.ya-ourskills{
+    .display-flex(@direction:row, @justify:space-between, @align);
+    
+    .ya-ourskills__item{
+        .display-flex(@direction, @justify:space-between, @align);
+        width:20%;
+        text-align:center;
+        
+        h2{
+            margin: 30px 0px;
+            text-transform: uppercase;
+        }
+
+        p{
+            color:@light-grey-color;
+        }
+    }
+
+    .ya-ourskills__diagram{
+        .display-flex(@direction, @justify:center, @align);
+        font-size:30px;
+        font-family: "Lato Black";
+        background: #F7F7F7;
+        width: 150px; height: 150px;
+        text-align: center;
+        border: 15px solid @blue-color;
+        border-right: 15px solid #cccccc;
+        border-radius: 100px;
+        
+    }
+}
+
+//ourteam
+.ya-ourteam{
+    background-color:#F7F7F7;
+    background-image: url("../images/bg-team.png");
+    .display-flex(@direction, @justify:space-around, @align);
+    padding: 10% 7.5%;
+    height:1082px;
+    margin: 0 auto;
+    color:white;
+    
+    .ya-section__header{
+        span, h6{
+            color:white;
+        }
+    }
+}
+
+.ya-ourteam__details{
+    .display-flex(@direction:row, @justify:space-between, @align);
+}
+
+.ya-ourteam__details--item{
+    width:20%;
+    .display-flex(@direction, @justify:space-between, @align);
+    text-align:center;
+    
+    h4{
+        color:@blue-color;
+        font-size:12;
+    }
+}
+
+.ya-team__member{
+    width:180px;
+    height:180px;
+    border-radius:90px;
+    
+    &:hover{
+        opacity: 0;
+    }
+}
+
+.ya-team__member--inside{
+    width:180px;
+    height:180px;
+    border-radius: 90px;
+    background-color: black;    
+}
+
+.ya-team__member1{
+    background-image:url("../images/face1.png");
+}
+.ya-team__member2{
+    background-image:url("../images/face2.png");
+}
+.ya-team__member3{
+    background-image:url("../images/face3.png");
+}
+.ya-team__member4{
+    background-image:url("../images/face4.png");
+}
+
+
+
+
+
 
 //Our Work
 
