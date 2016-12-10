@@ -45,6 +45,11 @@
 @text-align-center: center;
 @cursor-pointer: pointer;
 
+// flex-params
+@justify:space-between;
+@align:center;
+@direction:column;
+
 //Mixins
 .transition() {
     -webkit-transition: all .1s ease-out;
@@ -76,12 +81,22 @@
     background-size: cover;
 }
 
-.display-flex() {
+.display-flex(@direction, @justify, @align) {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    
+   -webkit-justify-content: @justify;
+    justify-content: @justify;
+    
+   -webkit-align-items: @align;
+    align-items:@align;
+    
+    flex-direction:@direction;
+    
+    
 }
 
 .flex-options-center() {
@@ -118,7 +133,7 @@ body {
 
 // Header
 .ya-header {
-    background: url(../images/) 100% no-repeat;
+    background: url(../images/bg-header.jpg) 100% no-repeat;
     .background-size-cover(); //using the mixin
     color: #fff;
     text-align: center;
@@ -171,7 +186,7 @@ body {
     margin: 0 auto;
     padding-top: 1%;
     padding-bottom: 1%;
-   	.display-flex(); //using the mixin
+   	.display-flex(@direction, @justify, @align); //using the mixin
     flex-flow: row wrap;
     align-content: space-around;
 }
