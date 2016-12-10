@@ -34,8 +34,7 @@ a {
   text-decoration: none;
 }
 body {
-  font: 100 10px/1.5 "", Arial, sans-serif;
-  background-color: #999999;
+  font: 400 16px/1.25 "Lato Regular", Arial, sans-serif;
 }
 .ya-header {
   background-image: url(../images/bg-header.jpg), url("../images/pixel.png");
@@ -122,6 +121,9 @@ body {
   height: 100%;
   margin: 0 auto;
 }
+.ya-section__header {
+  width: 30%;
+}
 .ya-section__header h5 {
   font-family: "Lato Black";
   text-transform: uppercase;
@@ -134,6 +136,141 @@ body {
 .ya-section__header h6 {
   font-family: "Lato Italic";
   font-size: 18px;
+}
+.ya-aboutus__header {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: row;
+}
+.ya-aboutus__nav {
+  margin: 5% 0%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: row;
+}
+.ya-aboutus__nav--item {
+  margin-right: 2px;
+  height: 60px;
+  width: 150px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #cccccc;
+  -webkit-transform: skewX(-15deg);
+  -moz-transform: skewX(-15deg);
+  -ms-transform: skewX(-15deg);
+  -o-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+  font-size: 20px;
+  font-family: "Lato Regular";
+}
+.ya-aboutus__nav--item:hover {
+  color: white;
+  background-color: #00ccff;
+}
+.ya-aboutus__tab,
+.ya-aboutus__col--text {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ya-aboutus__row,
+.ya-aboutus__col {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: row;
+}
+.ya-aboutus__col {
+  padding: 5% 2%;
+}
+.ya-aboutus__col--img {
+  width: 100px;
+  height: 100px;
+  background-color: #cccccc;
+  -webkit-transform: skewX(-15deg);
+  -moz-transform: skewX(-15deg);
+  -ms-transform: skewX(-15deg);
+  -o-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+  color: white;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 60px;
+}
+.ya-aboutus__col--img:hover {
+  background-color: #00ccff;
+}
+.fa {
+  transform: none;
+}
+.ya-aboutus__col--text {
+  width: 60%;
+}
+.ya-section-ourwork {
+  background-color: #FFF;
+}
+.ya-ourwork {
+  display: inline-block;
+}
+.ya-ourwork__title {
+  font-family: "Lato Black", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  color: #00ccff;
+  text-transform: uppercase;
+}
+.ya-ourwork__title span {
+  color: #ffae00;
+}
+.ya-ourwork__subtitle {
+  font-family: "Lato Italic", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #666666;
 }
 .ya-grid {
   width: 85%;
