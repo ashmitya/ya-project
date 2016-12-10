@@ -135,16 +135,30 @@ body {
 // Header
 .ya-header {
     background: url(../images/bg-header.jpg) 100% no-repeat;
+    background-image: url("../images/pixel.png") repeat;
     .background-size-cover(); //using the mixin
     color: #fff;
     text-align: center;
-    padding: 200px 0 200px;
-    min-height: 100vh;
+    // padding: 200px 0 200px;
+    // min-height: 100vh;
+    height:1032px;
+    .display-flex(@direction, @justify, @align);
     
+    &__top{
+        .display-flex(@direction:row, @justify, @align);
+    }
+
     &__logo {
         display: inline-block;
     	margin-top: 24px;
     }
+
+    &__logo--big {
+        align-self:center;
+        display: inline-block;
+        margin-top: 24px;
+    }
+
     &__menu {
     	display: inline-block;
     	padding-top: 35px;
@@ -169,11 +183,17 @@ body {
     	cursor: @cursor-pointer;
     }
   }
+
+  p{
+      font-size:22px;
+  }
 }
 
 .ya-container {
     width: 85%;
+    height:100%;
     margin: 0 auto;
+    .display-flex(@direction, @justify, @align:stretch);
 }
 
 
