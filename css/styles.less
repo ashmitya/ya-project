@@ -28,6 +28,7 @@
 //Variable
 @dark-grey-color: #333333;
 @light-grey-color: #999999;
+@grey-color: #666666;
 @yellow-color: #ffae00;
 @blue-color: #00ccff;
 @button-color: #FFF;
@@ -125,7 +126,7 @@ a {
 }
 
 body {
-    font: 100 10px/1.5 "", Arial, sans-serif;
+    font: 400 16px/1.25 "Lato Regular", Arial, sans-serif;
     background-color: @light-grey-color;
 }
 
@@ -218,8 +219,31 @@ body {
 
 //Services
 
-//Portfolio
+//Our Work
 
+.ya-section-ourwork {
+    background-color: #FFF;
+}
+
+.ya-ourwork {
+    display: @display-inline-block;
+    &__title {
+        font-family: "Lato Black", Arial, sans-serif;
+        font-weight: 900;
+        font-size: 30px;
+        color: @blue-color;
+        text-transform: uppercase;
+        & span {
+            color: #ffae00;
+        }
+    }
+    &__subtitle {
+        font-family: "Lato Italic", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: @grey-color;
+    }
+}
 .ya-grid {
     width: 85%;
     height: 500px;
