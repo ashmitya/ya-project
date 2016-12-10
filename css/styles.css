@@ -292,39 +292,39 @@ body {
 .ya-grid__col12 {
   width: 65%;
 }
-.ya-row__title {
+.ya-col__title {
   font-family: "Lato Light";
   font-size: 48px;
 }
-.ya-row__subtitle {
+.ya-col__subtitle {
   font-family: "Lato Regular";
   font-size: 24px;
 }
-#ya-row__pic1 {
+#ya-col__pic1 {
   background: url(../images/big-pic-1.jpg) center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-#ya-row__pic2 {
+#ya-col__pic2 {
   background: url(../images/big-pic-2.jpg) center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-#ya-row__pic3 {
+#ya-col__pic3 {
   background: url(../images/big-pic-3.jpg) center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-#ya-row__pic4 {
+#ya-col__pic4 {
   background: url(../images/big-pic-4.jpeg) center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-#ya-row__pic5 {
+#ya-col__pic5 {
   background: url(../images/big-pic-5.jpg) center no-repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
