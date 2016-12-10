@@ -38,8 +38,9 @@ body {
   background-color: #999999;
 }
 .ya-header {
-  background: url(../images/bg-header.jpg) 100% no-repeat;
-  background-image: url("../images/pixel.png") repeat;
+  background-image: url(../images/bg-header.jpg), url("../images/pixel.png");
+  background-position: bottom, top;
+  background-repeat: no-repeat, repeat;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -96,19 +97,15 @@ body {
 .ya-header__item:hover a {
   text-decoration: underline;
 }
-.ya-header__item__title {
-  font: 500 50px/0.5 "", Arial, sans-serif;
-}
-.ya-header__item__button {
-  cursor: pointer;
-}
 .ya-header p {
   font-size: 22px;
 }
-.ya-container {
-  width: 85%;
-  height: 100%;
-  margin: 0 auto;
+.ya-header__title {
+  font-family: "Lato Bold";
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.ya-container--flex-col {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -119,6 +116,24 @@ body {
   -webkit-align-items: stretch;
   align-items: stretch;
   flex-direction: column;
+}
+.ya-container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+.ya-section__header h5 {
+  font-family: "Lato Black";
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #00ccff;
+}
+.ya-section__header h5 span {
+  color: #ffae00;
+}
+.ya-section__header h6 {
+  font-family: "Lato Italic";
+  font-size: 18px;
 }
 .ya-grid {
   width: 85%;
