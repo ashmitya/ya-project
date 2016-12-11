@@ -31,18 +31,8 @@
 @grey-color: #666666;
 @yellow-color: #ffae00;
 @blue-color: #00ccff;
-@button-color: #FFF;
 
 @display-inline-block: inline-block;
-
-@thin-font: 100;
-@light-font: 300;
-@regular-font: 400;
-@medium-font: 500;
-@semibold-font: 600;
-@bold-font: 700;
-@black-font: 900;
-
 @text-align-justify: justify;
 @text-align-center: center;
 @cursor-pointer: pointer;
@@ -217,8 +207,7 @@ body {
     margin: 0 auto;
 }
 
-.ya-section__header,
-.ya-ourwork__text{
+.ya-section__header {
     width:30%;
     h5{
         font-family: "Lato Black";
@@ -431,8 +420,43 @@ body {
 .ya-section-ourwork {
     background-color: #FFF;
 }
+.ya-ourwork {
+    &__info {
+        .display-flex();
+        -webkit-justify-content:;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        flex-direction: wrap;
+        }
+    &__title {
+        width: 30%;
+        & h5 {
+        font-family: "Lato Black";
+        text-transform: uppercase;
+        font-size:30px;
+        color:@blue-color;
+        span {
+            color:@yellow-color;
+        }
+        & h6 {
+            font-family: "Lato Italic";
+            font-size:18px;
+            color: @grey-color;
+        }
+    }
+    }
+    &__img {
+        width: 10%;
+    }
+    &__text {
+        width: 60%;
+    }
+    
+}
 
 .ya-grid {
+    padding: 1% 0 1%;
     width: 100%;
     margin: 0 auto;
     .display-flex(@direction, @justify:space-between, @align);
@@ -440,16 +464,38 @@ body {
 }
 
 .ya-grid__row{
-    margin:2% 0%;
+    margin: 0.5% 0%;
+    height: 484px;  
     .display-flex(@direction:row, @justify:space-between, @align:stretch);
 }
 
+.ya-grid__col {
+    .display-flex();
+    flex-direction:@direction;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: @text-align-center;
+    opacity: 1;  
+    &:hover {
+        opacity: 0.7;
+    }
+    &:hover button {
+        opacity: 1;
+        padding: 10px 10px 10px;
+            border: 2px solid black;
+            background-color: transparent;
+            color: black;
+            font-family: "Lato Regular";
+            font-size: 30px;
+    } 
+}
+
 .ya-grid__col13{
-    width:30%;
+    width: 32.5%;
 }
 
 .ya-grid__col12{
-    width:65%;
+    width: 66.2%;
 }
 
 .ya-col{
@@ -461,29 +507,34 @@ body {
         font-family: "Lato Regular";
         font-size: 24px;
     }
+    &__btn {
+        padding-top: 40px;  
+        & button {
+            opacity: 0;
+        }   
+    }
 }
 
 #ya-col {
 
     &__pic1 {
          background: url(../images/big-pic-1.jpg) center no-repeat;
-        .background-size-cover();
     }
     &__pic2 {
         background: url(../images/big-pic-2.jpg) center no-repeat;
-        .background-size-cover();
+       
     }
     &__pic3 {
         background: url(../images/big-pic-3.jpg) center no-repeat;
-        .background-size-cover();
+       
     }
     &__pic4 {
         background: url(../images/big-pic-4.jpeg) center no-repeat;
-        .background-size-cover();
+       
     }
     &__pic5 {
         background: url(../images/big-pic-5.jpg) center no-repeat;
-        .background-size-cover();
+       
     }
 
 }
@@ -509,19 +560,24 @@ body {
     height: 50%;
 }
 
-.ya__row {
+.ya-row {
     &-1-3 {
-        width: 30%;   
+        width: 30%;
+        &:hover {
+           transform: scale(1.1);
+        }   
     }
     &__img {
         width: 100%;
     }
     &__title {
+        padding: 30px 0 12px;
         font-family: "Lato Bold";
         font-size: 16px;
         color: @dark-grey-color;
     }
     &__subtitle {
+        padding-bottom: 50px;
         font-family: "Lato Regular";
         font-size: 14px;
         color: @dark-grey-color;
@@ -572,11 +628,12 @@ body {
         font-size: 14px;
         line-height: 1.43;
         &:hover {
-            transform: scale(1.25);
+            transform: scale(1.1);
         }
         & a {
             color: @dark-grey-color;
             border: 1px solid @light-grey-color;
+            .border-radius-3px();
             padding: 10px 10px 10px;
             &:hover {
                 background-color: #f1f1f1;
@@ -587,7 +644,8 @@ body {
     }
 }
 
-.ya-section--tweets {
+.ya-section--tweets,
+.ya-section--quote {
     background-color:#F7F7F7;
     background-image:url("../images/bg-team.png");
     // background: #ABB5CA url(../images/close-up-laptop-keyboard.jpg) 100% no-repeat;
@@ -595,7 +653,9 @@ body {
     height: 1089px;
 }
 
-.ya-tweets {
+.ya-tweets,
+.ya-quote {
+    margin-top: 145px;
     padding: 230px 0 200px;
     text-align: center;
     &__title {
@@ -613,23 +673,37 @@ body {
     }
 }
 
+.ya-social {
+    text-align: center; 
+    padding: 50px 0 40px;
+    background-color: #2f2e2e;
+    & a {
+        color: #FFF;
+    }
+    & i {
+        font-size: 35px;
+        color: #FFF;
+        margin-left: 35px;
+        &:hover {
+            color: @blue-color;
+            transform: scale(1.25);
+        }
+    }
+}
+
 .ya-footer {
-    width: 85%;
+    padding: 30px 0 35px;
     margin: 0 auto;
-    padding: 35px 0 35px;
-    color: #999999;
-}
-
-.ya-footer__text {
-    display: @display-inline-block;
-}
-
-.ya-footer__icons {
-    display: @display-inline-block;
-}
-
-.ya-footer__icons {
-    opacity: 0.5;
+    background-color: @blue-color;
+    text-align: center;
+    &__text{ 
+    font-family: "Lato Bold"; 
+    font-size: 16px;
+    color: #FFF;
+    & span {
+        color: #0e97b9;
+        }
+    } 
 }
 
 #blue-diagonal {
@@ -659,7 +733,8 @@ body {
     }
 }
 
-.fa-twitter {
+.fa-twitter,
+.fa-quote-right {
     font-size: 85px;
     color: @blue-color;
 }
