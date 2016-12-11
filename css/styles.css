@@ -651,7 +651,8 @@ body {
 .ya-recentwork__nav li a:hover {
   background-color: #f1f1f1;
 }
-.ya-section--tweets {
+.ya-section--tweets,
+.ya-section--quote {
   background-color: #F7F7F7;
   background-image: url("../images/bg-team.png");
   -webkit-background-size: cover;
@@ -659,11 +660,14 @@ body {
   background-size: cover;
   height: 1089px;
 }
-.ya-tweets {
+.ya-tweets,
+.ya-quote {
+  margin-top: 145px;
   padding: 230px 0 200px;
   text-align: center;
 }
-.ya-tweets__title {
+.ya-tweets__title,
+.ya-quote__title {
   padding-top: 90px;
   font-size: 22px;
   color: #FFF;
@@ -730,7 +734,8 @@ body {
   fill: #0cf;
   fill-rule: evenodd;
 }
-.fa-twitter {
+.fa-twitter,
+.fa-quote-right {
   font-size: 85px;
   color: #00ccff;
 }
