@@ -415,43 +415,62 @@ body {
 .ya-team__member4 {
   background-image: url("../images/face4.png");
 }
-.ya-section-ourwork {
+.ya-section--ourwork,
+.ya-section--testimonials {
   background-color: #FFF;
 }
-.ya-ourwork__info {
+.ya-ourwork__info,
+.ya-testimonial__info {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: ;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   align-items: center;
-  flex-direction: wrap;
+  padding: 175px 0 90px;
 }
-.ya-ourwork__title {
-  width: 30%;
+.ya-ourwork__title,
+.ya-testimonial__title {
+  width: 25%;
+  padding-bottom: 70px;
 }
-.ya-ourwork__title h5 {
+.ya-ourwork__title h5,
+.ya-testimonial__title h5 {
   font-family: "Lato Black";
   text-transform: uppercase;
   font-size: 30px;
   color: #00ccff;
 }
-.ya-ourwork__title h5 span {
+.ya-ourwork__title h5 span,
+.ya-testimonial__title h5 span {
   color: #ffae00;
 }
-.ya-ourwork__title h5 h6 {
+.ya-ourwork__title h6,
+.ya-testimonial__title h6 {
   font-family: "Lato Italic";
   font-size: 18px;
   color: #666666;
 }
-.ya-ourwork__img {
+.ya-ourwork__img,
+.ya-testimonial__img {
   width: 10%;
 }
-.ya-ourwork__text {
+.ya-ourwork__text,
+.ya-testimonial__text {
   width: 60%;
+  padding-top: 60px;
+  font-family: "Lato Regular";
+  font-size: 16px;
+  color: #666666;
+}
+.ya-ourwork__title {
+  margin-right: 0px;
+}
+.ya-recentwork__title {
+  margin-right: 0px;
 }
 .ya-grid {
   padding: 1% 0 1%;
@@ -547,10 +566,9 @@ body {
 }
 .ya-grid--recentwork {
   width: 85%;
-  height: 500px;
   margin: 0 auto;
-  padding-top: 80px;
-  padding-bottom: 1%;
+  padding-top: 75px;
+  padding-bottom: 90px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -570,11 +588,31 @@ body {
 .ya-row-1-3 {
   width: 30%;
 }
-.ya-row-1-3:hover {
-  transform: scale(1.1);
+.ya-row__box {
+  margin-right: -5px;
+  position: relative;
+  background: black;
+  opacity: 1;
+}
+.ya-row__box:hover img {
+  opacity: 0.3;
+}
+.ya-row__box:hover .ya-row__text {
+  opacity: 1;
+}
+.ya-row__box img {
+  margin-bottom: -5px;
 }
 .ya-row__img {
   width: 100%;
+}
+.ya-row__text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45%;
+  margin: auto;
+  opacity: 0;
 }
 .ya-row__title {
   padding: 30px 0 12px;
@@ -606,7 +644,6 @@ body {
 }
 .ya-recentwork__btn {
   text-align: center;
-  margin: 90px auto;
   padding: 10px 30px 10px;
   background-color: #00ccff;
   border: 1px solid #00ccff;
@@ -662,7 +699,6 @@ body {
 }
 .ya-tweets,
 .ya-quote {
-  margin-top: 145px;
   padding: 230px 0 200px;
   text-align: center;
 }
@@ -738,4 +774,12 @@ body {
 .fa-quote-right {
   font-size: 85px;
   color: #00ccff;
+}
+.fa-search {
+  font-size: 20px;
+  color: #00ccff;
+}
+.fa-link {
+  font-size: 20px;
+  color: #7d7b79;
 }
