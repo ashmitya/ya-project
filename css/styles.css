@@ -420,7 +420,9 @@ body {
   background-color: #FFF;
 }
 .ya-ourwork__info,
-.ya-testimonial__info {
+.ya-testimonial__info,
+.ya-pricing__info,
+.ya-contact__info {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -433,44 +435,124 @@ body {
   padding: 175px 0 90px;
 }
 .ya-ourwork__title,
-.ya-testimonial__title {
-  width: 25%;
+.ya-testimonial__title,
+.ya-pricing__title,
+.ya-contact__title {
+  width: 29%;
   padding-bottom: 70px;
 }
 .ya-ourwork__title h5,
-.ya-testimonial__title h5 {
+.ya-testimonial__title h5,
+.ya-pricing__title h5,
+.ya-contact__title h5 {
   font-family: "Lato Black";
   text-transform: uppercase;
   font-size: 30px;
   color: #00ccff;
 }
 .ya-ourwork__title h5 span,
-.ya-testimonial__title h5 span {
+.ya-testimonial__title h5 span,
+.ya-pricing__title h5 span,
+.ya-contact__title h5 span {
   color: #ffae00;
 }
 .ya-ourwork__title h6,
-.ya-testimonial__title h6 {
+.ya-testimonial__title h6,
+.ya-pricing__title h6,
+.ya-contact__title h6 {
   font-family: "Lato Italic";
   font-size: 18px;
   color: #666666;
 }
 .ya-ourwork__img,
-.ya-testimonial__img {
+.ya-testimonial__img,
+.ya-pricing__img,
+.ya-contact__img {
   width: 10%;
 }
 .ya-ourwork__text,
-.ya-testimonial__text {
+.ya-testimonial__text,
+.ya-pricing__text,
+.ya-contact__text {
   width: 60%;
   padding-top: 60px;
   font-family: "Lato Regular";
   font-size: 16px;
   color: #666666;
 }
-.ya-ourwork__title {
-  margin-right: 0px;
+.ya-testimonial__client {
+  padding-bottom: 60px;
 }
-.ya-recentwork__title {
-  margin-right: 0px;
+.ya-testimonial__divider {
+  padding: 75px 0px 193px;
+  text-align: center;
+}
+.ya-testimonial__circle {
+  display: inline-block;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #cccccc;
+  cursor: pointer;
+}
+.ya-testimonial__circle:hover {
+  background-color: #999999;
+}
+.ya-testimonial__box {
+  width: 30%;
+  margin: 15px;
+  display: inline-block;
+  padding: 22px 15px 18px;
+  background-color: #f7f7f7;
+  color: #999999;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.ya-testimonial__box:hover {
+  transform: scale(1.1);
+}
+.ya-testimonial__box blockquote {
+  width: 90%;
+  font-family: "Lato Italic";
+  font-size: 16px;
+  line-height: 1.43;
+}
+.ya-testimonial__box-divider {
+  height: 45px;
+  position: relative;
+}
+.ya-testimonial__box-divider:before,
+.ya-testimonial__box-divider:after {
+  content: '';
+  position: absolute;
+  width: 275px;
+  height: 1px;
+  top: 50%;
+  background-color: #999999;
+}
+.ya-testimonial__box-text {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.ya-testimonial__box-text img {
+  padding-right: 10px;
+}
+.ya-testimonial__box-name {
+  font-family: "Lato Regular";
+  font-size: 14px;
+  color: #00ccff;
+}
+.ya-testimonial__box-name span {
+  color: #999999;
+  font-size: 12px;
 }
 .ya-grid {
   padding: 1% 0 1%;
@@ -508,6 +590,7 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   -webkit-justify-content: center;
   justify-content: center;
@@ -561,7 +644,8 @@ body {
 #ya-col__pic5 {
   background: url(../images/big-pic-5.jpg) center no-repeat;
 }
-.ya-section-recentwork {
+.ya-section-recentwork,
+.ya-section--pricing {
   background-color: #F7F7F7;
 }
 .ya-grid--recentwork {
@@ -591,6 +675,7 @@ body {
 .ya-row__box {
   margin-right: -5px;
   position: relative;
+  cursor: pointer;
   background: black;
   opacity: 1;
 }
@@ -692,20 +777,130 @@ body {
 .ya-section--quote {
   background-color: #F7F7F7;
   background-image: url("../images/bg-team.png");
+  height: 1032px;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 1089px;
 }
-.ya-tweets,
 .ya-quote {
-  padding: 230px 0 200px;
+  padding-top: 230px;
+  text-align: center;
+  color: #FFF;
+  font-size: 18px;
+}
+.ya-quote__title {
+  padding: 90px 0 60px;
+}
+.ya-quote__divider {
+  padding: 35px 0px 235px;
   text-align: center;
 }
-.ya-tweets__title,
-.ya-quote__title {
+.ya-quote__circle {
+  display: inline-block;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #cccccc;
+  cursor: pointer;
+}
+.ya-quote__circle:hover {
+  background-color: #999999;
+}
+.ya-tweets {
+  padding-top: 230px;
+  text-align: center;
+}
+.ya-tweets__title {
   padding-top: 90px;
+  font-size: 18px;
+  color: #FFF;
+}
+.ya-tweets__subtitle {
   font-size: 22px;
+  color: #FFF;
+}
+.ya-tweets__subtitle span {
+  color: #00ccff;
+}
+.ya-tweets__divider {
+  padding: 85px 0px 25px;
+  text-align: center;
+}
+.ya-tweets__circle {
+  display: inline-block;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #cccccc;
+  cursor: pointer;
+}
+.ya-tweets__circle:hover {
+  background-color: #999999;
+}
+.ya-pricing-box {
+  width: 22%;
+  display: inline-block;
+  margin-bottom: 140px;
+  background-color: #F7F7F7;
+  text-align: center;
+  margin-right: 25px;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-family: "Lato Bold";
+  font-size: 22px;
+  color: #FFF;
+}
+.ya-pricing-box:hover {
+  transform: scale(1.1);
+}
+.ya-pricing-box__title {
+  background-color: #00ccff;
+  padding: 25px 60px 30px 60px;
+  font-size: 22px;
+  color: #FFF;
+}
+.ya-pricing-box__info {
+  background-color: #F7F7F7;
+  font-family: "Lato Regular";
+  font-size: 14px;
+  line-height: 2.86;
+  color: #333333;
+}
+.ya-pricing-box__info-price {
+  font-size: 60px;
+  color: #333333;
+}
+.ya-pricing-box__info-price sup {
+  font-size: 36px;
+}
+.ya-pricing-box__info-price sub {
+  font-size: 12px;
+}
+.ya-pricing-box__info span {
+  font-size: 11px;
+  color: #999999;
+  text-transform: uppercase;
+}
+.ya-pricing-box__info button {
+  margin: 45px 0 20px;
+  padding: 12px 25px;
+  border: 2px solid #333333;
+  background-color: transparent;
+  color: #333333;
+  text-transform: uppercase;
+  font-family: "Lato Bold";
+  font-size: 11px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.ya-pricing-box__info button:hover {
+  background-color: #00ccff;
+  border: 2px solid #00ccff;
   color: #FFF;
 }
 .ya-section--testimonials a {
@@ -714,6 +909,77 @@ body {
 }
 .ya-section--testimonials a:hover {
   opacity: 1;
+}
+.ya-contact__section {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 170px 0 160px;
+}
+.ya-contact__form {
+  width: 90%;
+  font-family: "Lato Regular";
+  font-size: 16px;
+  color: #cccccc;
+}
+.ya-contact__form input {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  width: 49%;
+  height: 50px;
+  padding-left: 15px;
+}
+.ya-contact__form textarea {
+  width: 99%;
+  height: 160px;
+  font-size: 16px;
+  color: #cccccc;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 15px 0 0 15px;
+}
+.ya-contact-box {
+  width: 49%;
+  font-family: "Lato Regular";
+  font-size: 16px;
+  line-height: 1.4;
+  color: #666666;
+}
+.ya-contact-box__title {
+  text-transform: uppercase;
+  font-family: "Lato Bold";
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+.ya-contact-box__subtitle {
+  margin-bottom: 50px;
+}
+.ya-contact-box__item {
+  padding-bottom: 20px;
+}
+.ya-contact-form__subject {
+  width: 99%;
+}
+.ya-contact-form__btn {
+  margin-top: 10px;
+  background-color: #00ccff;
+  border: 2px solid #00ccff;
+  color: #FFF;
+}
+.ya-contact-form__btn:hover {
+  background-color: #FFF;
+  border: 2px solid #cccccc;
+  color: #999999;
+}
+input[type="text"] {
+  outline: none;
+}
+input[type="submit"] {
+  outline: none;
 }
 .ya-social {
   text-align: center;
@@ -770,10 +1036,23 @@ body {
   fill: #0cf;
   fill-rule: evenodd;
 }
+.fa-map-marker,
+.fa-phone,
+.fa-envelope-o,
+.fa-clock-o {
+  color: #666666;
+  font-size: 20px;
+  margin-right: 15px;
+}
 .fa-twitter,
 .fa-quote-right {
   font-size: 85px;
   color: #00ccff;
+}
+.fa-twitter:hover,
+.fa-quote-right:hover {
+  transform: scale(1.15);
+  color: #FFF;
 }
 .fa-search {
   font-size: 20px;
