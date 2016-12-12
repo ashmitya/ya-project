@@ -372,6 +372,7 @@ body {
 .ya-ourteam{
     background-color:#F7F7F7;
     background-image: url("../images/bg-team.png");
+    .background-size-cover(); //using the mixin
     .display-flex(@direction, @justify:space-around, @align);
     padding: 10% 7.5%;
     height:1082px;
@@ -608,8 +609,8 @@ body {
 .ya-grid--recentwork {
     width: 85%;
     margin: 0 auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    // padding-top: 5%;
+    // padding-bottom: 5%;
     .display-flex(@direction: row, @justify: space-between, @align: stretch);
     flex-flow: row wrap;
 }

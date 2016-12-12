@@ -353,6 +353,9 @@ body {
 .ya-ourteam {
   background-color: #F7F7F7;
   background-image: url("../images/bg-team.png");
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -621,8 +624,6 @@ body {
 .ya-grid--recentwork {
   width: 85%;
   margin: 0 auto;
-  padding-top: 5%;
-  padding-bottom: 5%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
