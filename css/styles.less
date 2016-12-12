@@ -36,6 +36,7 @@
 @text-align-justify: justify;
 @text-align-center: center;
 @cursor-pointer: pointer;
+@text-transform-uppercase: uppercase;
 
 // flex-params
 @justify:space-between;
@@ -191,7 +192,7 @@ body {
 
     &__title {
         font-family: "Lato Bold";
-        text-transform: uppercase;
+        text-transform: @text-transform-uppercase;
         font-size:22px;
     }
 }
@@ -211,7 +212,7 @@ body {
     width:30%;
     h5{
         font-family: "Lato Black";
-        text-transform: uppercase;
+        text-transform: @text-transform-uppercase;
         font-size:30px;
         color:@blue-color;
         span{
@@ -331,7 +332,7 @@ body {
     >h2{
         font-size:24px;
         font-family: "Lato Black";
-        text-transform: uppercase;
+        text-transform: @text-transform-uppercase;
         
     }
     >p{
@@ -350,7 +351,7 @@ body {
         
         h2{
             margin: 30px 0px;
-            text-transform: uppercase;
+            text-transform: @text-transform-uppercase;
         }
 
         p{
@@ -440,55 +441,128 @@ body {
 
 
 //Our Work
-
-.ya-section-ourwork {
+.ya-section--ourwork,
+.ya-section--testimonials {
     background-color: #FFF;
+}
+
+.ya-testimonial {
+    &__client {
+        padding-bottom: 60px;
+    }
+    &__divider {
+        padding: 75px 0px 193px;
+        text-align: @align;
+    }
+    &__circle {
+        display: inline-block;
+        margin-right: 8px;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        background-color: #cccccc;
+        cursor: @cursor-pointer;
+        &:hover {
+            background-color: @light-grey-color;
+        }
+    }
+    &__box {
+        width: 30%;
+        margin: 15px;
+        display: @display-inline-block;
+        padding: 22px 15px 18px;
+        background-color: #f7f7f7;
+        color: @light-grey-color;
+        cursor: @cursor-pointer;
+        .border-radius-3px();
+        &:hover {
+            transform: scale(1.1);
+        }
+        & blockquote {
+            width: 90%;
+            font-family: "Lato Italic";
+            font-size: 16px;
+            line-height: 1.43;
+        }
+        &-divider {
+            height: 45px;
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                width: 275px;
+                height: 1px;
+                top: 50%;
+                background-color: @light-grey-color;
+            }
+        }
+        &-text {
+            .display-flex();
+            flex-flow: row wrap;
+            align-items: center;
+            & img {
+                padding-right: 10px;
+            }
+        }
+        &-name {
+            font-family: "Lato Regular";
+            font-size: 14px;
+            color: @blue-color;
+            & span {
+                color: @light-grey-color;
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 .ya-grid {
     padding: 1% 0 1%;
     width: 100%;
     margin: 0 auto;
-    .display-flex(@direction, @justify:space-between, @align);
+    .display-flex(@direction, @justify: space-between, @align);
     color: @dark-grey-color;
 }
 
-.ya-grid__row{
+.ya-grid__row {
     margin: 0.5% 0%;
-    height: 484px;  
-    .display-flex(@direction:row, @justify:space-between, @align:stretch);
+    height: 484px;
+    .display-flex(@direction: row, @justify: space-between, @align: stretch);
 }
 
 .ya-grid__col {
     .display-flex();
-    flex-direction:@direction;
+    cursor: @cursor-pointer;
+    flex-direction: @direction;
     -webkit-justify-content: center;
     justify-content: center;
     text-align: @text-align-center;
-    opacity: 1;  
+    opacity: 1;
     &:hover {
         opacity: 0.7;
     }
     &:hover button {
         opacity: 1;
         padding: 10px 10px 10px;
-            border: 2px solid black;
-            background-color: transparent;
-            color: black;
-            font-family: "Lato Regular";
-            font-size: 30px;
-    } 
+        border: 2px solid black;
+        background-color: transparent;
+        color: black;
+        font-family: "Lato Regular";
+        font-size: 30px;
+    }
 }
 
-.ya-grid__col13{
+.ya-grid__col13 {
     width: 32.5%;
 }
 
-.ya-grid__col12{
+.ya-grid__col12 {
     width: 66.2%;
 }
 
-.ya-col{
+.ya-col {
     &__title {
         font-family: "Lato Light";
         font-size: 48px;
@@ -498,46 +572,41 @@ body {
         font-size: 24px;
     }
     &__btn {
-        padding-top: 40px;  
+        padding-top: 40px;
         & button {
             opacity: 0;
-        }   
+        }
     }
 }
 
 #ya-col {
-
     &__pic1 {
-         background: url(../images/big-pic-1.jpg) center no-repeat;
+        background: url(../images/big-pic-1.jpg) center no-repeat;
     }
     &__pic2 {
         background: url(../images/big-pic-2.jpg) center no-repeat;
-       
     }
     &__pic3 {
         background: url(../images/big-pic-3.jpg) center no-repeat;
-       
     }
     &__pic4 {
         background: url(../images/big-pic-4.jpeg) center no-repeat;
-       
     }
     &__pic5 {
         background: url(../images/big-pic-5.jpg) center no-repeat;
-       
     }
-
 }
-.ya-section-recentwork {
+
+.ya-section-recentwork,
+.ya-section--pricing {
     background-color: #F7F7F7;
 }
 
 .ya-grid--recentwork {
     width: 85%;
-    height: 500px;
     margin: 0 auto;
-    padding-top: 80px;
-    padding-bottom: 1%;
+    padding-top: 75px;
+    padding-bottom: 90px;
     .display-flex(); //using the mixin
     flex-flow: row wrap;
     justify-content: space-between;
@@ -553,12 +622,33 @@ body {
 .ya-row {
     &-1-3 {
         width: 30%;
-        &:hover {
-           transform: scale(1.1);
-        }   
+    }
+    &__box {
+        margin-right: -5px;
+        position: relative;
+        cursor: @cursor-pointer;
+        background: black;
+        opacity: 1;
+        &:hover img {
+            opacity: 0.3;
+        }
+        &:hover .ya-row__text {
+            opacity: 1;
+        }
+        & img {
+            margin-bottom: -5px;
+        }
     }
     &__img {
         width: 100%;
+    }
+    &__text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 45%;
+        margin: auto;
+        opacity: 0;
     }
     &__title {
         padding: 30px 0 12px;
@@ -581,7 +671,7 @@ body {
         font-family: "Lato Black";
         font-size: 24px;
         color: @grey-color;
-        text-transform: uppercase;
+        text-transform: @text-transform-uppercase;
     }
     &__subtitle {
         padding-top: 25px;
@@ -591,43 +681,41 @@ body {
     }
     &__btn {
         text-align: center;
-        margin: 90px auto;
         padding: 10px 30px 10px;
         background-color: @blue-color;
         border: 1px solid @blue-color;
         color: #FFF;
         font-size: 14px;
         line-height: 1.43;
-        text-transform: uppercase;
-        cursor: pointer;
+        text-transform: @text-transform-uppercase;
+        cursor: @cursor-pointer;
         &:hover {
             background-color: #FFF;
             color: @blue-color;
         }
     }
-    &__nav{
+    &__nav {
         padding-top: 90px;
         .display-flex();
         flex-flow: row wrap;
         justify-content: center;
         -webkit-justify-content: center;
         & li {
-        list-style: none;
-        margin-right: 5px;
-        font-family: "Lato Regular";
-        font-size: 14px;
-        line-height: 1.43;
-        &:hover {
-            transform: scale(1.1);
-        }
-        & a {
-            color: @dark-grey-color;
-            border: 1px solid @light-grey-color;
-            .border-radius-3px();
-            padding: 10px 10px 10px;
+            list-style: none;
+            margin-right: 5px;
+            font-family: "Lato Regular";
+            font-size: 14px;
+            line-height: 1.43;
             &:hover {
-                background-color: #f1f1f1;
-                
+                transform: scale(1.1);
+            }
+            & a {
+                color: @dark-grey-color;
+                border: 1px solid @light-grey-color;
+                .border-radius-3px();
+                padding: 10px 10px 10px;
+                &:hover {
+                    background-color: #f1f1f1;
                 }
             }
         }
@@ -636,26 +724,135 @@ body {
 
 .ya-section--tweets,
 .ya-section--quote {
-    background-color:#F7F7F7;
-    background-image:url("../images/bg-team.png");
-    // background: #ABB5CA url(../images/close-up-laptop-keyboard.jpg) 100% no-repeat;
+    background-color: #F7F7F7;
+    background-image: url("../images/bg-team.png");
+    height: 1032px;
     .background-size-cover();
-    height: 1089px;
 }
 
-.ya-tweets,
 .ya-quote {
-    margin-top: 145px;
-    padding: 230px 0 200px;
+    padding-top: 230px;
     text-align: center;
+    color: #FFF;
+    font-size: 18px;
     &__title {
-        padding-top: 90px;
-        font-size: 22px;
-        color: #FFF;
+        padding: 90px 0 60px;
+    }
+    &__divider {
+        padding: 35px 0px 235px;
+        text-align: @align;
+    }
+    &__circle {
+        display: inline-block;
+        margin-right: 8px;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        background-color: #cccccc;
+        cursor: @cursor-pointer;
+        &:hover {
+            background-color: @light-grey-color;
+        }
     }
 }
 
-.ya-section--testimonials a{
+.ya-tweets {
+    padding-top: 230px;
+    text-align: center;
+    &__title {
+        padding-top: 90px;
+        font-size: 18px;
+        color: #FFF;
+    }
+    &__subtitle {
+        font-size: 22px;
+        color: #FFF;
+        & span {
+            color: @blue-color;
+        }
+    }
+    &__divider {
+        padding: 85px 0px 25px;
+        text-align: @align;
+    }
+    &__circle {
+        display: inline-block;
+        margin-right: 8px;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        background-color: #cccccc;
+        cursor: @cursor-pointer;
+        &:hover {
+            background-color: @light-grey-color;
+        }
+    }
+}
+
+.ya-pricing-box {
+    width: 22%;
+    display: @display-inline-block;
+    margin-bottom: 140px;
+    background-color: #F7F7F7;
+    text-align: @align;
+    margin-right: 25px;
+    cursor: @cursor-pointer;
+    .border-radius-3px();
+    &:hover {
+        transform: scale(1.1);
+    }
+    font-family: "Lato Bold";
+    font-size: 22px;
+    color: #FFF;
+    &__title {
+        background-color: @blue-color;
+        padding: 25px 60px 30px 60px;
+        font-size: 22px;
+        color: #FFF;
+    }
+    &__info {
+        background-color: #F7F7F7;
+        font-family: "Lato Regular";
+        font-size: 14px;
+        line-height: 2.86;
+        color: @dark-grey-color;
+        &-price {
+            font-size: 60px;
+            color: @dark-grey-color;
+            & sup {
+                font-size: 36px;
+            }
+            & sub {
+                font-size: 12px;
+            }
+        }
+        & span {
+            font-size: 11px;
+            color: @light-grey-color;
+            text-transform: @text-transform-uppercase;
+        }
+        & button {
+            margin: 45px 0 20px;
+            padding: 12px 25px;
+            border: 2px solid @dark-grey-color;
+            background-color: transparent;
+            color: @dark-grey-color;
+            text-transform: @text-transform-uppercase;
+            font-family: "Lato Bold";
+            font-size: 11px;
+            .border-radius-3px();
+            &:hover {
+                background-color: @blue-color;
+                border: 2px solid @blue-color;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+.ya-section--testimonials a {
     opacity: 0.5;
     margin: 40px;
     &:hover {
@@ -663,8 +860,83 @@ body {
     }
 }
 
+.ya-contact {
+    &__section {
+        width: 100%;
+        .display-flex();
+        padding: 170px 0 160px;
+    }
+    &__form {
+        width: 90%;
+        font-family: "Lato Regular";
+        font-size: 16px;
+        color: #cccccc;
+        & input {
+            .border-radius-3px();
+            width: 49%;
+            height: 50px;
+            padding-left: 15px;
+        }
+        & textarea {
+            width: 99%;
+            height: 160px;
+            font-size: 16px;
+            color: #cccccc;
+            .border-radius-3px();
+            padding: 15px 0 0 15px;
+        }
+    }
+}
+
+
+.ya-contact-box {
+    width: 49%;
+    font-family: "Lato Regular";
+    font-size: 16px;
+    line-height: 1.4;
+    color: @grey-color;
+    &__title {
+        text-transform: uppercase;
+        font-family: "Lato Bold";
+        font-size: 16px;
+        color: @dark-grey-color;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        margin-bottom: 50px;
+    }
+    &__item {
+        padding-bottom: 20px;
+    }
+}
+
+.ya-contact-form {
+    &__subject {
+        width: 99%;
+    }
+    &__btn {
+        margin-top: 10px;
+        background-color: @blue-color;
+        border: 2px solid @blue-color;
+        color: #FFF;
+        &:hover {
+            background-color: #FFF;
+            border: 2px solid #cccccc;
+            color: @light-grey-color;
+        }
+    }
+}
+
+input[type="text"] {
+    outline: none;
+}
+
+input[type="submit"] {
+    outline: none;
+}
+
 .ya-social {
-    text-align: center; 
+    text-align: center;
     padding: 50px 0 40px;
     background-color: #2f2e2e;
     & a {
@@ -686,14 +958,14 @@ body {
     margin: 0 auto;
     background-color: @blue-color;
     text-align: center;
-    &__text{ 
-    font-family: "Lato Bold"; 
-    font-size: 16px;
-    color: #FFF;
-    & span {
-        color: #0e97b9;
+    &__text {
+        font-family: "Lato Bold";
+        font-size: 16px;
+        color: #FFF;
+        & span {
+            color: #0e97b9;
         }
-    } 
+    }
 }
 
 #blue-diagonal {
@@ -709,8 +981,8 @@ body {
     width: 44.844px;
     height: 119px;
     & cls-1 {
-       fill: #ffae00;
-        fill-rule: evenodd; 
+        fill: #ffae00;
+        fill-rule: evenodd;
     }
 }
 
@@ -723,8 +995,31 @@ body {
     }
 }
 
+.fa-map-marker,
+.fa-phone,
+.fa-envelope-o,
+.fa-clock-o {
+    color: @grey-color;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
 .fa-twitter,
 .fa-quote-right {
     font-size: 85px;
     color: @blue-color;
+    &:hover {
+        transform: scale(1.15);
+        color: #FFF;
+    }
+}
+
+.fa-search {
+    font-size: 20px;
+    color: @blue-color
+}
+
+.fa-link {
+    font-size: 20px;
+    color: #7d7b79
 }
