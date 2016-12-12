@@ -138,7 +138,7 @@ body {
   font-size: 18px;
   color: #666666;
 }
-.ya-aboutus__header {
+.ya-cont__header {
   margin-top: 5%;
   display: -webkit-box;
   display: -moz-box;
@@ -151,10 +151,10 @@ body {
   align-items: center;
   flex-direction: row;
 }
-.ya-aboutus__header > div {
+.ya-cont__header > div {
   width: 25%;
 }
-.ya-aboutus__header p {
+.ya-cont__header p {
   width: 70%;
 }
 .ya-aboutus__nav {
@@ -197,8 +197,8 @@ body {
   color: white;
   background-color: #00ccff;
 }
-.ya-aboutus__tab,
-.ya-aboutus__col--text {
+.ya-table,
+.ya-table__col--text {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -210,8 +210,19 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.ya-aboutus__row,
-.ya-aboutus__col {
+.ya-table__separator--vertical {
+  width: 1px;
+  height: 7em;
+  align-self: center;
+  background-color: #999999;
+}
+.ya-table__separator--horizontal {
+  width: 25vh;
+  height: 1px;
+  background-color: #999999;
+}
+.ya-table__row,
+.ya-table__col {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -219,14 +230,15 @@ body {
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-align-items: center;
-  align-items: center;
+  -webkit-align-items: stretch;
+  align-items: stretch;
   flex-direction: row;
 }
-.ya-aboutus__col {
+.ya-table__col {
   padding: 5% 2%;
+  width: 49%;
 }
-.ya-aboutus__col--img {
+.ya-table__col--img {
   width: 100px;
   height: 100px;
   background-color: #cccccc;
@@ -248,13 +260,13 @@ body {
   flex-direction: row;
   font-size: 60px;
 }
-.ya-aboutus__col--img:hover {
+.ya-table__col--img:hover {
   background-color: #00ccff;
 }
 .fa {
   transform: none;
 }
-.ya-aboutus__col--text {
+.ya-table__col--text {
   width: 60%;
 }
 .ya-container-ourskills {
@@ -417,41 +429,6 @@ body {
 }
 .ya-section-ourwork {
   background-color: #FFF;
-}
-.ya-ourwork__info {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: ;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  flex-direction: wrap;
-}
-.ya-ourwork__title {
-  width: 30%;
-}
-.ya-ourwork__title h5 {
-  font-family: "Lato Black";
-  text-transform: uppercase;
-  font-size: 30px;
-  color: #00ccff;
-}
-.ya-ourwork__title h5 span {
-  color: #ffae00;
-}
-.ya-ourwork__title h5 h6 {
-  font-family: "Lato Italic";
-  font-size: 18px;
-  color: #666666;
-}
-.ya-ourwork__img {
-  width: 10%;
-}
-.ya-ourwork__text {
-  width: 60%;
 }
 .ya-grid {
   padding: 1% 0 1%;

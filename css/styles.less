@@ -156,7 +156,7 @@ body {
 
     &__logo {
         display: inline-block;
-    	margin-top: 24px;
+        margin-top: 24px;
     }
 
     &__logo--big {
@@ -166,23 +166,23 @@ body {
     }
 
     &__menu {
-    	display: inline-block;
-    	padding-top: 35px;
-    	float: right;
+        display: inline-block;
+        padding-top: 35px;
+        float: right;
     }
 
     &__item {
-    	display: inline-block;
-    	font: ;
-    	color: #fff;
-    	margin-left: 50px;
-    	&:hover {
-    		color: #fff;
-    		transform: scale(1.25);
-    	}
-    	&:hover a {
-    		text-decoration: underline;
-    	}
+        display: inline-block;
+        font: ;
+        color: #fff;
+        margin-left: 50px;
+        &:hover {
+            color: #fff;
+            transform: scale(1.25);
+        }
+        &:hover a {
+            text-decoration: underline;
+        }
     }
 
     p{
@@ -225,7 +225,7 @@ body {
     }
 }
 
-.ya-aboutus__header{
+.ya-cont__header{
     margin-top:5%;
     .display-flex(@direction:row, @justify, @align);
     >div{
@@ -258,19 +258,43 @@ body {
     }
 }
 
-.ya-aboutus__tab,
-.ya-aboutus__col--text{
+.ya-table,
+.ya-table__col--text{
     .display-flex(@direction, @justify, @align);
 }
 
-.ya-aboutus__row,
-.ya-aboutus__col{
-    .display-flex(@direction:row, @justify, @align);
+.ya-table__separator--vertical{
+    width:1px;
+    height:7em;
+    align-self:center;
+    background-color:@light-grey-color;
 }
 
-.ya-aboutus__col{
+.ya-table__separator--horizontal{
+    width:25vh;
+    height:1px;
+    background-color:@light-grey-color;
+}
+
+// .ya-table__row .ya-table__col:first-child:after{
+//     content:"";
+//     width:1px;
+//     height:8em;
+//     background-color:@light-grey-color;
+// }
+
+// .ya-table__row:first-child .ya-table__col{
+//     border-bottom: 1px solid @light-grey-color;
+// }
+
+.ya-table__row,
+.ya-table__col{
+    .display-flex(@direction:row, @justify, @align:stretch);
+}
+
+.ya-table__col{
     padding:5% 2%;
-    
+    width:49%;
     &--img{
         width:100px;
         height:100px;
@@ -290,7 +314,7 @@ body {
     transform:none;
 }
 
-.ya-aboutus__col--text{
+.ya-table__col--text{
     width:60%;
     
 }
@@ -419,40 +443,6 @@ body {
 
 .ya-section-ourwork {
     background-color: #FFF;
-}
-.ya-ourwork {
-    &__info {
-        .display-flex();
-        -webkit-justify-content:;
-        justify-content: center;
-        -webkit-align-items: center;
-        align-items: center;
-        flex-direction: wrap;
-        }
-    &__title {
-        width: 30%;
-        & h5 {
-        font-family: "Lato Black";
-        text-transform: uppercase;
-        font-size:30px;
-        color:@blue-color;
-        span {
-            color:@yellow-color;
-        }
-        & h6 {
-            font-family: "Lato Italic";
-            font-size:18px;
-            color: @grey-color;
-        }
-    }
-    }
-    &__img {
-        width: 10%;
-    }
-    &__text {
-        width: 60%;
-    }
-    
 }
 
 .ya-grid {
