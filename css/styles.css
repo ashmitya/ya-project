@@ -45,6 +45,7 @@ body {
   background-size: cover;
   color: #fff;
   text-align: center;
+  padding-bottom: 6%;
   height: 1032px;
   display: -webkit-box;
   display: -moz-box;
@@ -405,15 +406,31 @@ body {
   width: 180px;
   height: 180px;
   border-radius: 90px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: row;
 }
 .ya-team__member:hover {
-  opacity: 0;
+  -webkit-filter: brightness(0.3);
+  filter: brightness(0.3);
 }
-.ya-team__member--inside {
-  width: 180px;
-  height: 180px;
-  border-radius: 90px;
-  background-color: black;
+.ya-team__member:hover .fa {
+  display: inline;
+}
+.ya-team__member .fa {
+  font-size: 2em;
+  color: #999999;
+  display: none;
+}
+.ya-team__member .fa:hover {
+  color: #00ccff;
 }
 .ya-team__member1 {
   background-image: url("../images/face1.png");
@@ -432,10 +449,10 @@ body {
   background-color: #FFF;
 }
 .ya-testimonial__client {
-  padding-bottom: 60px;
+  margin: 5% 0%;
 }
 .ya-testimonial__divider {
-  padding: 75px 0px 193px;
+  margin: 5% 0%;
   text-align: center;
 }
 .ya-testimonial__circle {
@@ -455,7 +472,7 @@ body {
   width: 30%;
   margin: 15px;
   display: inline-block;
-  padding: 22px 15px 18px;
+  padding: 2% 2%;
   background-color: #f7f7f7;
   color: #999999;
   cursor: pointer;
@@ -506,7 +523,7 @@ body {
   font-size: 12px;
 }
 .ya-grid {
-  padding: 1% 0 1%;
+  padding: 5% 0 ;
   width: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -598,20 +615,25 @@ body {
 .ya-section-recentwork,
 .ya-section--pricing {
   background-color: #F7F7F7;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .ya-grid--recentwork {
   width: 85%;
   margin: 0 auto;
-  padding-top: 75px;
-  padding-bottom: 90px;
+  padding-top: 5%;
+  padding-bottom: 5%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
   -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  flex-direction: row;
+  flex-flow: row wrap;
 }
 [class*="ya__row-"] {
   -webkit-box-sizing: border-box;
@@ -663,7 +685,7 @@ body {
   color: #333333;
 }
 .ya-recentwork {
-  padding: 125px 0 145px;
+  padding: 10% 0%;
   text-align: center;
 }
 .ya-recentwork__title {
@@ -734,16 +756,23 @@ body {
   background-size: cover;
 }
 .ya-quote {
-  padding-top: 230px;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20% 0%;
   text-align: center;
   color: #FFF;
   font-size: 18px;
 }
-.ya-quote__title {
-  padding: 90px 0 60px;
-}
 .ya-quote__divider {
-  padding: 35px 0px 235px;
   text-align: center;
 }
 .ya-quote__circle {
@@ -760,11 +789,21 @@ body {
   background-color: #999999;
 }
 .ya-tweets {
-  padding-top: 230px;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20% 0%;
   text-align: center;
 }
 .ya-tweets__title {
-  padding-top: 90px;
   font-size: 18px;
   color: #FFF;
 }
@@ -776,7 +815,6 @@ body {
   color: #00ccff;
 }
 .ya-tweets__divider {
-  padding: 85px 0px 25px;
   text-align: center;
 }
 .ya-tweets__circle {
@@ -799,6 +837,7 @@ body {
   background-color: #F7F7F7;
   text-align: center;
   margin-right: 25px;
+  margin-top: 5%;
   cursor: pointer;
   -webkit-border-radius: 3px;
   border-radius: 3px;
