@@ -639,6 +639,7 @@ body {
 .ya-section-pricing {
   background-color: #F7F7F7;
 }
+
 .ya-recentwork {
   padding: 125px 0 145px;
   text-align: center;
@@ -674,6 +675,9 @@ body {
 }
 .ya-recentwork__nav {
   padding-top: 90px;
+.ya-grid--recentwork {
+  width: 85%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
